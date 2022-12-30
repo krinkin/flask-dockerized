@@ -5,4 +5,8 @@
  - apache2
  - flask
 
-
+### Testing
+```bash
+$ docker-compose up -d
+$ wget localhost:8080
+```
