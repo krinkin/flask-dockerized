@@ -5,8 +5,8 @@ services:
         container_name: flask
         build: .
         ports:
-            - "8000:5000"   # Flask debug server
-            - "8080:80"     # Flask apache server
+            - "127.0.0.1:8000:5000"   # Flask debug server
+            - "127.0.0.1:8080:80"     # Flask apache server
         volumes:
             - ./:/app
             - ./conf/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
@@ -19,5 +19,5 @@ services:
         volumes:
             - ./data:/data/db
         ports:
-            - "27017:27017"
+            - "127.0.0.1:27018:27017"
 
