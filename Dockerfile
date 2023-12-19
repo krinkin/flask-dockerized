@@ -6,7 +6,7 @@ RUN apt update
 RUN apt install -y apache2 libapache2-mod-wsgi-py3
 
 # Not nessesary but useful for the debug
-RUN apt install -y htop vim git net-tools psmisc
+RUN apt install -y htop vim git net-tools psmisc tree
 
 COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip

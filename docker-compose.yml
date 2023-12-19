@@ -6,7 +6,7 @@ services:
         build: .
         ports:
             - "127.0.0.1:8000:5000"   # Flask debug server
-            - "127.0.0.1:8080:80"     # Flask apache server
+            - "0.0.0.0:8080:80"     # Flask apache server
         volumes:
             - ./:/app
             - ./conf/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
